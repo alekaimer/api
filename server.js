@@ -8,8 +8,8 @@ app.use(cors())
 
 app.get('/', (req, res)=>res.json(
   [
-    {user: 'Alexandre'},
-    {user: 'Ariane'},
+    {name: 'Alexandre'},
+    {name: 'Ariane'},
   ]
 ))
 app.listen('4567')
