@@ -21,8 +21,14 @@ app.use(cors())
 
 //back-end
 app.get('/', async (req, res)=>{
-  const {data} = await axios('https://jsonplaceholder.typicode.com/users') // pegando response.data de dentro da response do axios com desestruturação
-  return res.json(data)
+  try {
+    
+    const {data} = await axios('https://jsonplaceholder.typicode.com/users') // pegando response.data de dentro da response do axios com desestruturação
+    return res.json(data)
+
+  } catch (error) {
+    console.error('Error!', error)
+  }
 })
 
 app.listen('4567')
