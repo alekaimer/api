@@ -1,10 +1,10 @@
-const cors = require('cors')
 
 const express = require('express')
 const app = express()
 
-app.use(cors())
+const cors = require('cors')
 
 app.get('/', (req, res)=>res.json([{message: 'OK'}]))
-
 app.listen('4567')
+
+app.use(cors())
