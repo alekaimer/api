@@ -4,7 +4,8 @@
   "description": "Vídeo: Consumindo API no Front e no Back-end | CodeDrops #45\r Link: https://www.youtube.com/watch?v=vYlz3SmNXQQ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
