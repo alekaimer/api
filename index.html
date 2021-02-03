@@ -6,6 +6,7 @@
   <title>Document</title>
 </head>
 <body>
+  <main></main>
   <script>
     
     async function getContent(apiUrl) {
@@ -14,15 +15,25 @@
         const response = await fetch( apiUrl )
         // console.log('Fetch OK!', response)
         const data = await response.json()
+        // console.log('Data:', data)
 
-        console.log('Data:', data)
-
+        show(data)
       }
       catch (error) {
         console.error('Error!', error)
       }
     }
     getContent('http://localhost:4567')
+
+    function show(users) {
+      let output = ''
+
+      for(let user of users) {
+        output += `<li>${user.user}</li>`
+      }
+
+      document.querySelector('main').innerHTML = output
+    }
      
   </script>
 </body>
